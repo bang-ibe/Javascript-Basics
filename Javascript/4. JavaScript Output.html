@@ -1,0 +1,51 @@
+<!-- JavaScript Can Change HTML Content -->
+<!DOCTYPE <html>
+    <head> </head>
+    <body>
+        <h3>Using innerHTML </h3>
+        <h1>My first webpage</h1>
+        <p>My first paragraph</p>
+        <p id="demo"></p>
+        <script>
+        document.getElementById("demo").innerHTML = 5+6;
+        </script>
+        <br><br>
+        <h3> Using document.write()</h3>
+
+        <script>
+            document.write(3+6);
+        </script>
+        <br>
+
+        <!-- Using document.write() after an HTML document is loaded, will delete all existing HTML -->
+        <button type="button" onclick="document.write(5+6)">try this one</button>
+        <br>
+        <br>
+
+        <h3 style="color: red;">Using window.alert()</h3>
+        <script>
+            window.alert(3+66);
+            // or
+            // alert(3+66);
+        </script>
+        <br><br>
+
+        <!-- For debugging purposes, you can call the console.log() method in the browser to display data -->
+        <h3 style="color:red;">Using console.log()
+        </h3>
+        <h2>Activate Debugging</h2>
+
+        <p>F12 on your keyboard will activate debugging.</p>
+        <p>Then select "Console" in the debugger menu.</p>
+        <p>Then click Run again.</p>
+        <script>
+            console.log(5+6);
+        </script>
+        <br><br>
+
+        <h3 style="color: red;">JavaScript Print</h3> 
+        <h4>The window.print() Method</h4>
+        <p>Click the button to print the current page.</p>
+        <button onclick="window.print()">Print this page</button>
+    </body>
+</html>

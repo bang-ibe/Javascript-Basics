@@ -1,0 +1,43 @@
+<!DOCTYPE <html>
+    <head> </head>
+    <body>
+        <!-- <h3 style="color: red;"></h3> -->
+        <h3 style="color: red;">JavaScript Statements and Semicolon</h3>
+        <p>Semicolons separate JavaScript statements.        </p>
+        <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+        <p id="demo"></p>
+
+        <script>
+        let x, y, z;  // Statement 1
+        x = 5;        // Statement 2
+        y = 6;        // Statement 3
+        z = x + y;    // Statement 4  
+        
+        document.getElementById("demo").innerHTML = "The value of z is " + z + ".";
+        </script>
+        <br><br>
+        <h3 style="color: red;">JavaScript Statements
+        </h3>
+        <p>In HTML, JavaScript statements are executed by the browser.</p>
+        <p id="demo2"></p>
+        <script>
+            document.getElementById("demo2").innerHTML="Hello Dolly";
+        </script>
+        <br><br>
+
+        <h3 style="color: red;">JavaScript Code Blocks
+        </h3>
+        <p>JavaScript code blocks are written between { and }</p>
+
+        <button type="button" onclick="Jeez()">Click me!</button>
+
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <script>
+            function Jeez(){
+                document.getElementById('demo3').innerHTML = "Hello Dolly";
+                document.getElementById('demo4').innerHTML = "Hi There";
+            }
+        </script>
+    </body>
+</html>

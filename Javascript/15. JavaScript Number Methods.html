@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        </h2>JavaScript Number Methods</h2>
+        <p id="demo"></p>
+        
+        <script>
+            let x = 123;
+            document.getElementById("demo").innerHTML = x.toString() + "<br>" +
+            (123).toString() + "<br>" + (100 + 21).toString();
+        </script>
+        
+        <br>
+        <p>The toExponential() method returns a string, with the number rounded
+            and written using exponential notation.</p>
+
+        <p>An optional parameter defines the number of digits behind the decimal point.</p>
+        <p id="demo2"></p>
+        <script>
+            let x1 = 9.655;
+            document.getElementById("demo2").innerHTML =   x1.toExponential() + "<br>" + x1.toExponential(2) + "<br>" + x1.toExponential(4) + "<br>" + x1.toExponential(6);
+        </script>
+
+        <br>
+        <p>The toFixed() method rounds a number to a given number of digits.</p>
+        <p>For working with money, toFixed(2) is perfect.</p>
+        <p id="demo3"></p>
+        <script>
+            let x2 = 9.6555;
+            document.getElementById("demo3").innerHTML = x2.toFixed(0) + "<br>" + x2.toFixed(2) + "<br>" + x2.toFixed(4) + "<br>" + x2.toFixed(6) + "<br>";
+        </script>
+
+        <br>
+        <p>The valueOf() method returns a number as a number:</p>
+        <p id="demo4"></p>
+
+        <script>
+            let x3 = 123;
+
+            document.getElementById("demo4").innerHTML = 
+            x3.valueOf() + "<br>" +
+            (123).valueOf() + "<br>" +
+            (100 + 23).valueOf();
+        </script>
+
+        <br>
+
+        <p>The Number() method converts variables to numbers:</p>
+        <p id="demo5"></p>
+        <script>
+            document.getElementById("demo5").innerHTML = 
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("10") + "<br>" + 
+            Number("  10") + "<br>" +
+            Number("10  ") + "<br>" +
+            Number(" 10  ") + "<br>" +
+            Number("10.33") + "<br>" + 
+            Number("10,33") + "<br>" +
+            Number("10 33") + "<br>" +
+            Number("John");
+        </script>
+
+        <p>The Number() method can convert a date to a number:</p>
+        <p id="demo6"></p>
+        <p id="demo7"></p><span> in milliseconds</span>
+        <script>
+            let x4 = new Date("1970-01-01");
+            document.getElementById("demo6").innerHTML = Number(x4);
+            
+            let x5 = new Date("2017-09-30");
+            document.getElementById("demo7").innerHTML = Number(x5);
+        </script>
+
+        <h2>parseInt()</h2>
+        <p>The global JavaScript function parseInt() converts strings to numbers:</p>
+        <p id="demo8"></p>
+        <br>
+        <p>The parseFloat() method converts strings to numbers:</p>
+        <p id="demo9"></p>
+
+        <p>MAX_VALUE returns the largest possible number in JavaScript.</p>
+        <p id="demo10"></p>
+
+        <p>MIN_VALUE returns the smallest number possible in JavaScript.</p>
+        <p id="demo11"></p>
+
+        <p>POSITIVE_INFINITY</p>
+        <p id="demo12"></p>
+        <script>
+            document.getElementById("demo8").innerHTML = 
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" +
+            parseInt("10") + "<br>" +
+            parseInt("10.33") + "<br>" +
+            parseInt("10 6") + "<br>" +  
+            parseInt("10 years") + "<br>" +  
+            parseInt("years 10"); 
+
+            document.getElementById("demo9").innerHTML = 
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +  
+            parseFloat("10 years") + "<br>" +
+            parseFloat("years 10");  
+
+            let x6 = Number.MAX_VALUE;
+            document.getElementById("demo10").innerHTML = x6;
+
+            let x7 = Number.MIN_VALUE;
+            document.getElementById("demo11").innerHTML = x7;
+
+            let x8 = Number.POSITIVE_INFINITY;
+            document.getElementById("demo12").innerHTML = x8;
+        </script>
+
+        
+        <p>POSITIVE_INFINITY is returned on overflow:</p>
+        <p id="demo13"></p>
+
+        <p>NEGATIVE_INFINITY</p>
+        <p id="demo14"></p>
+
+        <p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+        <p id="demo15"></p>
+
+        <p>Using a Number property on a variable, expression, or value, will return undefined:</p>
+        <p id="demo16"></p>
+        <script>
+            let x9 = 1 / 0;
+            document.getElementById("demo13").innerHTML = x9;
+
+            let x10 = Number.NEGATIVE_INFINITY;
+            document.getElementById("demo14").innerHTML = x10;
+
+            document.getElementById("demo15").innerHTML = 100 / "Apple";
+
+            let x11 = 6;
+            document.getElementById("demo16").innerHTML = x11.MAX_VALUE;
+        </script>
+    </body>
+</html>

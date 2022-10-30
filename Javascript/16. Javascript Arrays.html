@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <h2>JavaScript Arrays</h2>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+
+        <script>
+            const cars = [
+              "Saab",
+              "Volvo",
+              "BMW"
+            ];
+        document.getElementById("demo").innerHTML = cars;
+
+        const cars2 = [];
+        cars2 [0] ="saab";
+        cars2 [1] ="Volvo";
+        cars2 [2] ="BMW";
+        document.getElementById("demo2").innerHTML = cars2;
+
+        const cars3 = new Array("Saab", "Volvo", "BMW");
+        document.getElementById("demo3").innerHTML = cars3; 
+        </script>
+
+        <br>
+        <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+        <p id="demo4"></p>
+
+        <p>Changing array value</p>
+        <p id="demo5"></p>
+
+        <p>Calling array</p>
+        <p id="demo6"></p>
+
+        <script>
+            const cars4 = ["Saab", "Volvo", "BMW"];
+            document.getElementById("demo4").innerHTML = cars4;
+
+            const cars5 = ["Saab", "Volvo", "BMW"];
+            cars[0] = "Opel";
+            document.getElementById("demo5").innerHTML = cars5;
+
+            document.getElementById("demo6").innerHTML = cars4;
+        </script>
+
+        <h2>Arrays are Objects</h2>
+        <p>Arrays use numbers to access its elements.</p>
+        <p id="demo7"></p>
+
+        <br>
+        <p>JavaScript uses names to access object properties.</p>
+        <p id="demo8"></p>
+
+        <br>
+        <p>The length property returns the length of an array.</p>
+        <p id="demo9"></p>
+        <script>
+            const person = ['john', 'doe', 43];
+            document.getElementById("demo7").innerHTML = person[0];
+
+            const person1 = {firstName:"John",lastName:"doe", age:"46"}
+            document.getElementById('demo8').innerHTML = person1.firstName;
+
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.length;
+        </script>
+
+        <br>
+        <p>The best way to loop through an array is using a standard for loop:</p>
+        <p id="demo10"></p>
+        <br>
+
+        <p>Array.forEach() calls a function for each array element.</p>
+        <p id="demo11"></p>
+        <script>
+            let fLen = fruits.length;
+            let text = '<ul>';
+            for(let i = 0; i < fLen; i++){
+                text += "<li>" +fruits[i] +'</li'
+            }
+            text+='</ul>'
+            document.getElementById('demo10').innerHTML = text;
+        </script>
+
+        <script>
+            let text1 = "<ul>";
+            fruits.forEach(myFunction);
+            text1 += '</ul>';
+            document.getElementById("demo11").innerHTML = text1;
+            
+            function myFunction(value){
+                text += 'li' + value + '</li>'
+            }
+        </script>
+
+
+        <p>The push method appends a new element to an array.</p>
+        <button onclick="myFunction2()">Try it</button>
+        <p id="demo12"></p>
+        
+        <script>
+            const fruits2 = ["Banana", "Orange", "Apple"];
+            document.getElementById("demo12").innerHTML = fruits2
+
+            function myFunction2(){
+                fruits.push('lemon')
+                document.getElementById('demo12').innerHTML = fruits2;
+            } 
+        </script>
+
+        <br>
+        <p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+        <button onclick="myFunction3()">Try it</button>
+        <script>
+            function myFunction3(){
+                fruits[fruits.length] = "Lemon";
+                document.getElementById('demo13').innerHTML = fruits;
+            }
+        </script>
+        <h2 style="color:red ;">WARNING</h2>
+        <p>Adding elements with high indexes can create undefined "holes" in an array        </p>
+        <br>
+
+        <p>Asssociative Index</p>
+        <p id="demo14"></p>
+        <script>
+            const person2 =[];
+            person2[0] = "John";
+            person2[1] = "Doe";
+            person2[2] = 46; 
+
+            document.getElementById("demo14").innerHTML = person2[0] + " " + person2.length;
+        </script>
+        <p>If you use a named index when accessing an array, JavaScript will redefine the array to a standard object, and some array methods and properties will produce undefined or incorrect results.</p>
+        <br>
+        <p><b><pre>
+You should use objects when you want the element names to be strings (text).
+You should use arrays when you want the element names to be numbers.
+        </pre></b></p>
+
+        <h2>How to Recognize an Array</h2>
+        <p id="demo15"></p>
+        <p id="demo16"></p>
+        <script>
+        document.getElementById("demo15").innerHTML = Array.isArray(fruits);
+        document.getElementById("demo16").innerHTML = fruits instanceof Array;
+
+        </script>
+    </body>
+</html>

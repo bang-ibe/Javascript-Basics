@@ -1,0 +1,44 @@
+<!-- JavaScript Can Change HTML Content -->
+<!DOCTYPE <html>
+    <head> 
+        <!-- JavaScript in <head> -->
+        <script>
+            function myFunction(){
+                document.getElementById('demo2').innerHTML = "Paragraph Changed"
+            }
+        </script>
+    </head>
+    <body>
+        <h3>The script Tag</h3>
+        <h4>JavaScript in Body</h3>
+        <p id="demo"></p>
+        <script>document.getElementById('id').innerHTML="my First Javascript"</script><br>
+        <br>
+
+        <p id="demo2">Demo JS in Head</p>
+        <button type="button" onclick="myFunction()">Try It Bro!</button>
+        <br><br>
+        
+        <h3>Demo JavaScript in Body</h3>
+        <p id="demo3">A paragraph</p>
+        <button type="button" onclick="myFunction2()">Click me please!</button>
+        <script>
+            function myFunction2(){
+                document.getElementById('demo3').innerHTML = "Paragraph changed"
+            }
+        </script>
+        
+        <h3>Demo External JavaScript</h3>
+        <p id="demo4">A Paragraph</p>
+        <button type="button" onclick="myFunction3()">Click me!</button>
+        <p>This example links to "myScript.js".</p>
+        <p>(myFunction is stored in "myScript.js")</p>
+
+        <script src="3. myScript.js"></script>
+
+        <!-- <script src="myScript1.js"></script>
+        <script src="myScript2.js"></script> -->
+        <!-- <script src="https://www.w3schools.com/js/myScript.js"></script> -->
+        
+    </body>
+</html>

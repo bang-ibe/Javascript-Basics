@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Strings</h2>
+        <p id="demo"></p>
+        <script>
+            let text = "john Doe";
+            document.getElementById("Demo").innerHTML = text;
+        </script>
+        <br>
+        <p>Strings are written inside quotes. You can use single or double quotes:</p>
+        <p id="demo1"></p>
+        <script>
+             let carName1 = "volvo XC60";
+             let carName2 = 'Volvo XC60';
+             document.getElementById("demo1").innerHTML = carName1 + " " + carName2;
+        </script>
+
+        <br>
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+        <p id="demo3"></p>
+        <script>
+            let answer1 = "It's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"'; 
+            document.getElementById("demo3").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+        </script>
+        <br>
+
+        <p>The length property returns the length of a string:</p>
+        <p id="demo4"></p>
+        <script>
+            let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo4").innerHTML = text.length;
+        </script>
+        <br>
+        <p>The escape sequence \" inserts a double quote in a string.</p>
+        <p id="demo5"></p>
+        <script>
+            let text2 = "We are the so-called \"Vikings\" from the north.";
+            Document.getElementById("demo5").innerHTML = text2;
+        </script>
+
+        <p>The escape sequence \' inserts a single quote in a string.</p>
+        <p id="demo6"></p>
+
+        <script>
+            let text3 = 'it\'s alright';
+            document.getElementById("demo6").innerHTML = text3;
+        </script>
+        <h2>JavaScript Strings as Objects</h2>
+        <p id="demo7"></p>
+        <script>
+            let x = "John";
+            let y = new String("John");
+            document.getElementById("demo7").innerHTML = typeof x + "<br>" + typeof y;
+        </script>
+    </body>
+</html>
